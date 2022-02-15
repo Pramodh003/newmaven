@@ -12,7 +12,7 @@ node('master')
     {
         sh 'scp /home/ubuntu/.jenkins/workspace/pipelineview/webapp/target/webapp.war ubuntu@172.31.41.245:/var/lib/tomcat8/webapps/testenv.war'
     }
-    stage('ContinuousTesting')
+    stage('ContinuousTesting_mast')
     {
         git 'https://github.com/Pramodh003/Functional-Testing.git'
         sh 'java -jar /home/ubuntu/.jenkins/workspace/pipelineview/testing.jar'
